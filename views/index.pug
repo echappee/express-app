@@ -3,3 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  h2 I would like to eat #{food}
+  a(href='/recipe') click here for recipe
+  h2 Introduction to the #{recipes}
+
+  ul 
+    each recipe, recipe_id in recipes
+      li 
+        a(href='/recipe/' + recipe_id) #{recipe.name}

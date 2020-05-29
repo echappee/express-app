@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title 
+  a(href='/') home
+  h2 This is a recipe for #{recipe.name}
+  ul
+    each ingredient in recipe.ingredients
+      li= ingredient
