@@ -7,7 +7,7 @@ block content
   a(href='/recipe') click here for recipe
   h2 Introduction to the #{recipes}
 
-  ul 
+  ul(class='list-group')
     each recipe, recipe_id in recipes
-      li 
+      li(class='list-group-item')
         a(href='/recipe/' + recipe_id) #{recipe.name}
