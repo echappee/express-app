@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-let recipes= {
+let recipes = {
   1: {
     name: 'green salad',
-    ingredients: ['lettuce','tomatoes']
+    ingredients: ['lettuce', 'tomatoes']
   },
   2: {
-    name:'burger',
+    name: 'burger',
     ingredients: ['bun', 'patty', 'tomatoes']
   },
   3: {
@@ -15,7 +15,7 @@ let recipes= {
   },
   4: {
     name: 'bolognese pasta',
-    ingredients: ['pasta', 'tomato sauce','carrots','oignon','celeri', 'grounded beef']
+    ingredients: ['pasta', 'tomato sauce', 'carrots', 'oignon', 'celeri', 'grounded beef']
   },
   5: {
     name: 'persian rice',
@@ -24,15 +24,15 @@ let recipes= {
 }
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'La cuisine en tempo', food:'banane', recipes:recipes });
+router.get('/', function (req, res, next) {
+  res.render('index.html', { title: 'La cuisine en tempo', food: 'banane', recipes: recipes });
 });
 
 /* GET recipe page. */
-router.get('/recipe/:recipe_id', function(req, res, next) {
+router.get('/recipe/:recipe_id', function (req, res, next) {
   let recipe_id = req.params.recipe_id;
   console.log(recipes[recipe_id]);
-  res.render('recipe', { title: 'salade verte', recipe_name: 'burger', recipe:recipes[recipe_id]});
+  res.render('recipe.html', {recipe: recipes[recipe_id] });
 });
 
 module.exports = router;

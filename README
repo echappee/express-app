@@ -2,5 +2,5 @@ install the depencies:
 $ npm install 
 
 start the server: 
-$ DEBUG=express-app:* nodemon start
+$ DEBUG=express-app:* nodemon -e js,html start
 
