@@ -25,7 +25,7 @@ let recipes= {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Laure', food:'banane', recipes:recipes });
+  res.render('index', { title: 'La cuisine en tempo', food:'banane', recipes:recipes });
 });
 
 /* GET recipe page. */
